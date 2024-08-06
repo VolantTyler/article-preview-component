@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  background-color: hsl(210, 46%, 95%);
+}
+
+.card-heading {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  width: 730px;
+  height: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 280px auto;
+}
+
+.card-image {
+  height: 280px;
+  float: left;
+}
+.card-image img {
+  height: inherit;
+}
+
+img.headshot {
+  border-radius: 100px;
+  height: 40px;
+}/*# sourceMappingURL=style.css.map */

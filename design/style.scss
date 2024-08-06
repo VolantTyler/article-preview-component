@@ -1,0 +1,41 @@
+$dark-gray-blue: hsl(217, 19%, 35%);
+$desaturated-dark-blue: hsl(214, 17%, 51%);
+$gray-blue: hsl(212, 23%, 69%);
+$light-gray-blue: hsl(210, 46%, 95%);
+$white: #ffffff;
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  background-color: $light-gray-blue;
+}
+
+.card-heading {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.card {
+  background-color: $white;
+  width: 730px;
+  height: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 280px auto;
+}
+
+.card-image {
+  height: 280px;
+  float: left;
+
+  img {
+    height: inherit;
+  }
+}
+
+img.headshot {
+  border-radius: 100px;
+  height: 40px;
+}
