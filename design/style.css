@@ -1,8 +1,13 @@
-body {
+@font-face {
     font-family: Manrope;
     src: url(https://fonts.google.com/specimen/Manrope);
 }
 
-h1.test {
+body {
+    font-family: Manrope;
+    font-size: 13px;
+}
+
+.test {
     color: red;
 }
