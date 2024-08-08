@@ -5,11 +5,6 @@ body {
   background-color: hsl(210, 46%, 95%);
 }
 
-.card-heading {
-  font-weight: 500;
-  font-size: 20px;
-}
-
 .card {
   background-color: #ffffff;
   width: 730px;
@@ -17,17 +12,58 @@ body {
   border-radius: 10px;
   overflow: hidden;
   margin: 280px auto;
+  display: flex;
+  color: #6e8098;
 }
-
-.card-image {
+.card .card-image {
   height: 280px;
+  width: 285px;
   float: left;
+  overflow-x: clip;
 }
-.card-image img {
+.card .card-image img {
   height: inherit;
 }
+.card .card-content {
+  margin: 35.65px 40px;
+  float: right;
+}
+.card .card-content .card-heading {
+  font-weight: 700;
+  font-size: 20px;
+  margin: unset;
+  color: #48556a;
+}
 
-img.headshot {
+.author-card {
+  display: flex;
+  align-items: center;
+}
+.author-card img.headshot {
   border-radius: 100px;
   height: 40px;
+  float: left;
+  margin-right: 16px;
+}
+.author-card .name {
+  font-weight: 700;
+  margin: 0;
+}
+.author-card .date {
+  color: #9daec2;
+  margin: 0;
+}
+.author-card .share {
+  float: right;
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 100px;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.author-card .share img {
+  margin: auto;
 }/*# sourceMappingURL=style.css.map */

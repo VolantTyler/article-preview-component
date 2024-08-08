@@ -1,8 +1,15 @@
+// spaces
 $dark-gray-blue: hsl(217, 19%, 35%);
 $desaturated-dark-blue: hsl(214, 17%, 51%);
 $gray-blue: hsl(212, 23%, 69%);
 $light-gray-blue: hsl(210, 46%, 95%);
+
 $white: #ffffff;
+
+// font
+$dark-gray: #48556a;
+$light-gray: #6e8098;
+$lightest-gray: #9daec2;
 
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
@@ -10,11 +17,11 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 13px;
   background-color: $light-gray-blue;
-}
 
-.card-heading {
-  font-weight: 500;
-  font-size: 20px;
+  // outline everything:
+  // * {
+  //   border: 1px solid red;
+  // }
 }
 
 .card {
@@ -24,18 +31,66 @@ body {
   border-radius: 10px;
   overflow: hidden;
   margin: 280px auto;
-}
+  display: flex;
 
-.card-image {
-  height: 280px;
-  float: left;
+  color: $light-gray;
 
-  img {
-    height: inherit;
+  .card-image {
+    height: 280px;
+    width: 285px;
+    float: left;
+    overflow-x: clip;
+
+    img {
+      height: inherit;
+    }
+  }
+
+  .card-content {
+    margin: 35.65px 40px;
+    float: right;
+
+    .card-heading {
+      font-weight: 700;
+      font-size: 20px;
+      margin: unset;
+      color: $dark-gray;
+    }
   }
 }
 
-img.headshot {
-  border-radius: 100px;
-  height: 40px;
+.author-card {
+  display: flex;
+  align-items: center;
+
+  img.headshot {
+    border-radius: 100px;
+    height: 40px;
+    float: left;
+    margin-right: 16px;
+  }
+  .name {
+    font-weight: 700;
+    margin: 0;
+  }
+  .date {
+    color: $lightest-gray;
+    margin: 0;
+  }
+
+  .share {
+    float: right;
+    background-color: $light-gray-blue;
+    border-radius: 100px;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    img {
+      margin: auto;
+    }
+  }
 }
