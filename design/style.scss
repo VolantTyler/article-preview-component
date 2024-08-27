@@ -32,13 +32,12 @@ body {
   overflow: hidden;
   margin: 280px auto;
   display: flex;
-
   color: $light-gray;
 
   .card-image {
     height: 280px;
     width: 285px;
-    float: left;
+    // float: left;
     overflow-x: clip;
 
     img {
@@ -48,7 +47,7 @@ body {
 
   .card-content {
     margin: 35.65px 40px;
-    float: right;
+    // float: right;
 
     .card-heading {
       font-weight: 700;
@@ -59,38 +58,48 @@ body {
   }
 }
 
-.author-card {
+.card-footer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  img.headshot {
+  img.author-headshot {
     border-radius: 100px;
     height: 40px;
     float: left;
     margin-right: 16px;
   }
-  .name {
+  .author-details {
+    display: inline-block;
+  }
+  .author-name {
     font-weight: 700;
     margin: 0;
   }
-  .date {
+  .author-date {
     color: $lightest-gray;
     margin: 0;
   }
 
   .share {
-    float: right;
     background-color: $light-gray-blue;
     border-radius: 100px;
     height: 32px;
     width: 32px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
 
-    img {
+    svg {
       margin: auto;
+    }
+
+    &:hover {
+      background-color: $dark-gray;
+      cursor: pointer;
+
+      // change color of SVG arrow icon
+      path {
+        fill: $light-gray-blue;
+      }
     }
   }
 }
