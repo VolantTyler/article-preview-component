@@ -61,14 +61,42 @@ body {
   height: 32px;
   width: 32px;
   display: flex;
+  cursor: pointer;
+  position: relative;
 }
 .card-footer .share svg {
   margin: auto;
 }
 .card-footer .share:hover {
   background-color: #48556a;
-  cursor: pointer;
 }
 .card-footer .share:hover path {
   fill: hsl(210, 46%, 95%);
+}
+.card-footer .share .share-popup-text {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+.card-footer .share .share-popup-text:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.card-footer .share .share-popup-text.show {
+  visibility: visible;
 }/*# sourceMappingURL=style.css.map */
