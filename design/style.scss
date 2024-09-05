@@ -29,7 +29,7 @@ body {
   width: 730px;
   height: 280px;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: visible;
   margin: 280px auto;
   display: flex;
   color: $light-gray;
@@ -37,17 +37,16 @@ body {
   .card-image {
     height: 280px;
     width: 285px;
-    // float: left;
     overflow-x: clip;
 
     img {
       height: inherit;
+      border-radius: 10px 0 0 10px;
     }
   }
 
   .card-content {
     margin: 35.65px 40px;
-    // float: right;
 
     .card-heading {
       font-weight: 700;
@@ -103,19 +102,30 @@ body {
       }
     }
 
-    .share-popup-text {
+    .share-popup {
       visibility: hidden;
-      width: 160px;
-      background-color: #555;
+      width: max-content;
+      background-color: $dark-gray-blue;
       color: #fff;
       text-align: center;
       border-radius: 6px;
-      padding: 8px 0;
+      padding: 0.5rem 1.5rem;
       position: absolute;
       z-index: 1;
       bottom: 125%;
       left: 50%;
-      margin-left: -80px;
+      margin-left: -106px;
+
+      span {
+        vertical-align: middle;
+        color: $lightest-gray;
+        letter-spacing: 0.25rem;
+      }
+
+      img {
+        padding: 10px 5px;
+        vertical-align: middle;
+      }
 
       &:after {
         content: "";
@@ -125,7 +135,7 @@ body {
         margin-left: -5px;
         border-width: 5px;
         border-style: solid;
-        border-color: #555 transparent transparent transparent;
+        border-color: $dark-gray-blue transparent transparent transparent;
       }
 
       &.show {

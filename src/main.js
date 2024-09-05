@@ -1,5 +1,5 @@
-const shareButton = document.getElementById('share-social')
+const shareButton = document.getElementById("share-social");
 
 function toggleSharePopup() {
-    shareButton.classList.toggle('show')
+  shareButton.classList.toggle("show");
 }

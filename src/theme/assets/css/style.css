@@ -10,7 +10,7 @@ body {
   width: 730px;
   height: 280px;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: visible;
   margin: 280px auto;
   display: flex;
   color: #6e8098;
@@ -22,6 +22,7 @@ body {
 }
 .card .card-image img {
   height: inherit;
+  border-radius: 10px 0 0 10px;
 }
 .card .card-content {
   margin: 35.65px 40px;
@@ -73,21 +74,31 @@ body {
 .card-footer .share:hover path {
   fill: hsl(210, 46%, 95%);
 }
-.card-footer .share .share-popup-text {
+.card-footer .share .share-popup {
   visibility: hidden;
-  width: 160px;
-  background-color: #555;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: hsl(217, 19%, 35%);
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 8px 0;
+  padding: 0.5rem 1.5rem;
   position: absolute;
   z-index: 1;
   bottom: 125%;
   left: 50%;
-  margin-left: -80px;
+  margin-left: -106px;
 }
-.card-footer .share .share-popup-text:after {
+.card-footer .share .share-popup span {
+  vertical-align: middle;
+  color: #9daec2;
+  letter-spacing: 0.25rem;
+}
+.card-footer .share .share-popup img {
+  padding: 10px 5px;
+  vertical-align: middle;
+}
+.card-footer .share .share-popup:after {
   content: "";
   position: absolute;
   top: 100%;
@@ -95,8 +106,8 @@ body {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #555 transparent transparent transparent;
+  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
 }
-.card-footer .share .share-popup-text.show {
+.card-footer .share .share-popup.show {
   visibility: visible;
 }/*# sourceMappingURL=style.css.map */
