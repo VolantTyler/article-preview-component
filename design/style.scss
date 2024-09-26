@@ -11,6 +11,9 @@ $dark-gray: #48556a;
 $light-gray: #6e8098;
 $lightest-gray: #9daec2;
 
+// breakpoints
+$layout-breakpoint-mobile: 410px;
+
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 body {
@@ -34,14 +37,37 @@ body {
   display: flex;
   color: $light-gray;
 
+  @media only screen and (max-width: $layout-breakpoint-mobile) {
+    flex-direction: column;
+    width: 350px;
+    height: fit-content;
+    margin: 140px auto;
+
+    p {
+      font-weight: 600;
+    }
+  }
+
   .card-image {
     height: 280px;
     width: 285px;
     overflow-x: clip;
 
+    @media only screen and (max-width: $layout-breakpoint-mobile) {
+      height: 240px;
+      width: 350px;
+      overflow-y: clip;
+    }
+
     img {
       height: inherit;
       border-radius: 10px 0 0 10px;
+
+      @media only screen and (max-width: $layout-breakpoint-mobile) {
+        height: auto;
+        width: 350px;
+        border-radius: 10px 10px 0 0;
+      }
     }
   }
 
@@ -53,6 +79,11 @@ body {
       font-size: 20px;
       margin: unset;
       color: $dark-gray;
+
+      @media only screen and (max-width: $layout-breakpoint-mobile) {
+        font-weight: 800;
+        font-size: 16px;
+      }
     }
   }
 }
@@ -61,6 +92,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width: $layout-breakpoint-mobile) {
+    margin-top: 40px;
+  }
 
   img.author-headshot {
     border-radius: 100px;

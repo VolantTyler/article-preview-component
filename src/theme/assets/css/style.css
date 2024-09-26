@@ -15,14 +15,40 @@ body {
   display: flex;
   color: #6e8098;
 }
+@media only screen and (max-width: 410px) {
+  .card {
+    flex-direction: column;
+    width: 350px;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 140px auto;
+  }
+  .card p {
+    font-weight: 600;
+  }
+}
 .card .card-image {
   height: 280px;
   width: 285px;
   overflow-x: clip;
 }
+@media only screen and (max-width: 410px) {
+  .card .card-image {
+    height: 240px;
+    width: 350px;
+    overflow-y: clip;
+  }
+}
 .card .card-image img {
   height: inherit;
   border-radius: 10px 0 0 10px;
+}
+@media only screen and (max-width: 410px) {
+  .card .card-image img {
+    height: auto;
+    width: 350px;
+    border-radius: 10px 10px 0 0;
+  }
 }
 .card .card-content {
   margin: 35.65px 40px;
@@ -33,11 +59,22 @@ body {
   margin: unset;
   color: #48556a;
 }
+@media only screen and (max-width: 410px) {
+  .card .card-content .card-heading {
+    font-weight: 800;
+    font-size: 16px;
+  }
+}
 
 .card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media only screen and (max-width: 410px) {
+  .card-footer {
+    margin-top: 40px;
+  }
 }
 .card-footer img.author-headshot {
   border-radius: 100px;
