@@ -1,9 +1,3 @@
-/* outline everything: */
-/* * {
-  outline: 1px solid red;
-  outline-offset: -1px;
-} */
-
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 body {
   font-family: "Manrope", sans-serif;
@@ -16,7 +10,7 @@ body {
   width: 730px;
   height: 280px;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: visible;
   margin: 280px auto;
   display: flex;
   color: #6e8098;
@@ -24,15 +18,14 @@ body {
 .card .card-image {
   height: 280px;
   width: 285px;
-  float: left;
   overflow-x: clip;
 }
 .card .card-image img {
   height: inherit;
+  border-radius: 10px 0 0 10px;
 }
 .card .card-content {
   margin: 35.65px 40px;
-  float: right;
 }
 .card .card-content .card-heading {
   font-weight: 700;
@@ -46,37 +39,75 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.author-card img.author-headshot {
+.card-footer img.author-headshot {
   border-radius: 100px;
   height: 40px;
   float: left;
   margin-right: 16px;
 }
-.author-card .author-details {
+.card-footer .author-details {
   display: inline-block;
 }
-.author-card .author-name {
+.card-footer .author-name {
   font-weight: 700;
   margin: 0;
 }
-.author-card .author-date {
+.card-footer .author-date {
   color: #9daec2;
   margin: 0;
 }
 .card-footer .share {
-  float: right;
   background-color: hsl(210, 46%, 95%);
   border-radius: 100px;
   height: 32px;
   width: 32px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
+  cursor: pointer;
+  position: relative;
 }
-.card-footer .share img {
+.card-footer .share svg {
   margin: auto;
 }
-
-
-/*# sourceMappingURL=style.css.map */
+.card-footer .share:hover {
+  background-color: #48556a;
+}
+.card-footer .share:hover path {
+  fill: hsl(210, 46%, 95%);
+}
+.card-footer .share .share-popup {
+  visibility: hidden;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: hsl(217, 19%, 35%);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -106px;
+}
+.card-footer .share .share-popup span {
+  vertical-align: middle;
+  color: #9daec2;
+  letter-spacing: 0.25rem;
+}
+.card-footer .share .share-popup img {
+  padding: 10px 5px;
+  vertical-align: middle;
+}
+.card-footer .share .share-popup:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+}
+.card-footer .share .share-popup.show {
+  visibility: visible;
+}/*# sourceMappingURL=style.css.map */

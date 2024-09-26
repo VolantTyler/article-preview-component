@@ -29,26 +29,24 @@ body {
   width: 730px;
   height: 280px;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: visible;
   margin: 280px auto;
   display: flex;
-
   color: $light-gray;
 
   .card-image {
     height: 280px;
     width: 285px;
-    float: left;
     overflow-x: clip;
 
     img {
       height: inherit;
+      border-radius: 10px 0 0 10px;
     }
   }
 
   .card-content {
     margin: 35.65px 40px;
-    float: right;
 
     .card-heading {
       font-weight: 700;
@@ -59,38 +57,90 @@ body {
   }
 }
 
-.author-card {
+.card-footer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  img.headshot {
+  img.author-headshot {
     border-radius: 100px;
     height: 40px;
     float: left;
     margin-right: 16px;
   }
-  .name {
+  .author-details {
+    display: inline-block;
+  }
+  .author-name {
     font-weight: 700;
     margin: 0;
   }
-  .date {
+  .author-date {
     color: $lightest-gray;
     margin: 0;
   }
 
   .share {
-    float: right;
     background-color: $light-gray-blue;
     border-radius: 100px;
     height: 32px;
     width: 32px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
+    cursor: pointer;
+    position: relative;
 
-    img {
+    svg {
       margin: auto;
+    }
+
+    &:hover {
+      background-color: $dark-gray;
+
+      // change color of SVG arrow icon
+      path {
+        fill: $light-gray-blue;
+      }
+    }
+
+    .share-popup {
+      visibility: hidden;
+      width: max-content;
+      background-color: $dark-gray-blue;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 0.5rem 1.5rem;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -106px;
+
+      span {
+        vertical-align: middle;
+        color: $lightest-gray;
+        letter-spacing: 0.25rem;
+      }
+
+      img {
+        padding: 10px 5px;
+        vertical-align: middle;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: $dark-gray-blue transparent transparent transparent;
+      }
+
+      &.show {
+        visibility: visible;
+      }
     }
   }
 }
